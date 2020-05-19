@@ -40,6 +40,7 @@ export default {
   }
 
   .audio-meter {
+    margin: 0 auto;
     display: flex;
     width: 10px;
     height: 16px;
