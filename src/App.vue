@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <div>
+      quality {{ quality }}
+    </div>
+    <div>
+      volume {{ volume }}
+    </div>
     <audio-meter
       :quality="quality"
       :volume="volume"

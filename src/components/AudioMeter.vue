@@ -1,20 +1,12 @@
 <template>
   <div>
-    <div>
-      quality {{ quality }}
+    <div v-if="quality === 6" class="audio-meter">
+      <div class="quality-6"></div>
     </div>
-    <div>
-      volume {{ volume }}
-    </div>
-    <div>
-      <div v-if="quality === 6" class="audio-meter">
-        <div class="quality-6"></div>
-      </div>
-      <div v-else :class="'quality-' + quality" class="audio-meter">
-        <div :style="{ 'height': `${volume * 10}px` }"></div>
-        <div :style="{ 'height': `${volume * 16}px` }" v-if="quality < 5"></div>
-        <div :style="{ 'height': `${volume * 10}px` }" v-if="quality === 1 || quality === 2"></div>
-      </div>
+    <div v-else :class="'quality-' + quality" class="audio-meter">
+      <div :style="{ 'height': `${volume * 10}px` }"></div>
+      <div :style="{ 'height': `${volume * 16}px` }" v-if="quality < 5"></div>
+      <div :style="{ 'height': `${volume * 10}px` }" v-if="quality === 1 || quality === 2"></div>
     </div>
   </div>
 </template>
