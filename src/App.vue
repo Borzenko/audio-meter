@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <audio-meter
+      :quality="quality"
+      :volume="volume"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import AudioMeter from './components/AudioMeter.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    AudioMeter,
+  },
+  data() {
+    return {
+      quality: 1,
+      volume: 0,
+    };
+  },
+  methods: {
+    getRandomInt(m, mx) {
+      const min = Math.ceil(m);
+      const max = Math.floor(mx);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+  },
+  mounted() {
+    setInterval(() => {
+      this.quality = this.getRandomInt(1, 6);
+      this.volume = (Math.random()).toFixed(1);
+    }, 500);
   },
 };
 </script>
@@ -23,6 +44,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
