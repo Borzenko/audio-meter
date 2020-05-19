@@ -50,7 +50,7 @@ export default {
 
   .audio-meter > div {
     width: 2px;
-    border-radius: 15px;
+    border-radius: 4px;
     margin-right: 2px;
     min-height: 2px;
   }
@@ -62,7 +62,7 @@ export default {
   .quality-6 {
     width: 100% !important;
     height: 2px;
-    border-radius: 15px;
+    border-radius: 4px;
     background: #FF0000;
   }
 </style>
