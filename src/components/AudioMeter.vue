@@ -45,7 +45,7 @@ export default {
     width: 10px;
     height: 16px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .audio-meter > div {
