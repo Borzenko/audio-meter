@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   .quality-5 > div {
     background: red;
   }
