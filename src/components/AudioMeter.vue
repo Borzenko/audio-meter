@@ -28,15 +28,15 @@ export default {
 
 <style scoped>
   .quality-5 > div {
-    background: red;
+    background: #FF9D00;
   }
 
   .quality-3 > div, .quality-4 > div {
-    background: orange;
+    background: #FF9D00;
   }
 
   .quality-1 > div, .quality-2 > div {
-    background: green
+    background: #15FF00
   }
 
   .audio-meter {
@@ -62,6 +62,6 @@ export default {
     width: 100% !important;
     height: 2px;
     border-radius: 15px;
-    background: red;
+    background: #FF0000;
   }
 </style>
