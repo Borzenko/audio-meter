@@ -38,7 +38,7 @@ export default {
     setInterval(() => {
       this.quality = this.getRandomInt(1, 6);
       this.volume = (Math.random()).toFixed(1);
-    }, 500);
+    }, 100);
   },
 };
 </script>
