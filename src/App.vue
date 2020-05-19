@@ -37,8 +37,8 @@ export default {
   mounted() {
     setInterval(() => {
       this.quality = this.getRandomInt(1, 6);
-      this.volume = (Math.random()).toFixed(1);
-    }, 100);
+      this.volume = parseFloat((Math.random()).toFixed(1));
+    }, 1000);
   },
 };
 </script>
